@@ -125,13 +125,13 @@ var currentlyPlayingSong = null;
 
 $(document).ready(function() {
     setCurrentAlbum(albumPicasso);
-});
 
-var index = 1;
-albumImage.addEventListener('click', function(event) {
-    setCurrentAlbum(albums[index]);
-    index++;
-    if (index >= albums.length) {
-        index = 0;
-    }
+    var index = 1;
+    albumImage.addEventListener('click', function(event) {
+        setCurrentAlbum(albums[index]);
+        index++;
+        if (index >= albums.length) {
+            index = 0;
+        }
+    });
 });
