@@ -53,7 +53,7 @@ var createSongRow = function (songNumber, songName, songLength) {
     
     var $row = $(template);
     
-    var clickHandler = function() {
+    var clickHandler = function () {
 	var songNumber = $(this).attr('data-song-number');
 
 	if (currentlyPlayingSong !== null) {
@@ -91,19 +91,21 @@ var createSongRow = function (songNumber, songName, songLength) {
     
     $row.find('.song-item-number').click(clickHandler);
     $row.hover(onHover, offHover);
+    
     return $row;
 };
 
 var albums = [albumPicasso, albumMarconi, albumMountaineering];
 
-
-     var $albumTitle = $('.album-view-title');
-     var $albumArtist = $('.album-view-artist');
-     var $albumReleaseInfo = $('.album-view-release-info');
-     var $albumImage = $('.album-cover-art');
-     var $albumSongList = $('.album-view-song-list');
+var albumImage = document.getElementsByClassName('album-cover-art')[0];
 
 var setCurrentAlbum = function (album) {
+    
+    var $albumTitle = $('.album-view-title');
+    var $albumArtist = $('.album-view-artist');
+    var $albumReleaseInfo = $('.album-view-release-info');
+    var $albumImage = $('.album-cover-art');
+    var $albumSongList = $('.album-view-song-list');
     
     $albumTitle.text(album.title);
     $albumArtist.text(album.artist);
