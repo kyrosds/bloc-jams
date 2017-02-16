@@ -1,3 +1,6 @@
+
+"use strict"
+
 var animatePoints = function () {
     var revealPoint = function() {
         $(this).css({
